@@ -4,9 +4,8 @@ console.log('Welcome to the Brain Games!');
 
 const name = readlineSync.question('May I have your name?');
 console.log('Hello,' ,name+'!');
-
+console.log('Answer "yes" if the number is even, otherwise answer "no".');
 function main () {
-    console.log('Answer "yes" if the number is even, otherwise answer "no".');
     function getRandomInt(max) {
         return Math.floor(Math.random() *  max + 1);
     }
@@ -27,6 +26,10 @@ let i = 0;
 while (i <= 2) {
     if (main()) {
     i += 1;
+    if (i === 3) {
+        console.log(`Congratulations, ${name}!`);
+    i = 4
+    }
     } else {
         i = 3;
     }
